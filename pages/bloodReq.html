@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Information - Blood Bank System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bloodReq.css">
+</head>
+<body>
+
+    <div class="container">
+        <aside class="sidebar">
+
+            <nav>
+                <ul>
+                    <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="Det_Donor.html"><i class="fas fa-user"></i> Donor Information</a></li>
+                    <li><a href="Det_Patient.html"><i class="fas fa-user-injured"></i> Patient Information</a></li>
+                    <li><a href="bloodReq.html"><i class="fas fa-tint"></i> Blood Requests</a></li>
+                    <li><a href="#"><i class="fas fa-history"></i> Request History</a></li>
+                    <li><a href="stock.html"><i class="fas fa-heart"></i> Blood Stock</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="content">
+            <h1>Patient Blood Requests</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>Age</th>
+                        <th>Blood Group</th>
+                        <th>Disease</th>
+                        <th>Date Requested</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="patientTableBody">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="assets/js/bloodReq.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!-- adminlogin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Blood Bank System</title>
+    <link rel="stylesheet" href="assets/css/loginMain.css">
+    <link rel="stylesheet" href="assets/css/admin_login.css">
+</head>
+<body>
+    
+    <div class="main-container">
+        <div class="form-container">
+            <h1 class="form-heading">Admin Login</h1>
+            <p class="subtitle">Please login to access the admin dashboard</p>
+            
+            <form id="adminLoginForm">
+                <!-- Username -->
+                <div class="input-group">
+                    <label for="adminUsername">Username</label>
+                    <input type="text" id="adminUsername" placeholder="Enter your username" required>
+                </div>
+                
+                <!-- Password -->
+                <div class="input-group">
+                    <label for="adminPassword">Password</label>
+                    <input type="password" id="adminPassword" placeholder="Enter your password" required>
+                </div>
+
+                <!-- Login Button -->
+                <button type="submit" class="login-btn">Login</button>
+
+                <p id="message" class="error"></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/js/admin_login.js"></script>
+</body>
+</html>

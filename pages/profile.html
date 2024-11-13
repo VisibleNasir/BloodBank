@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Profile - Chaincare Blood Bank System</title>
+    <link rel="stylesheet" href="assets/css/profile.css">
+</head>
+<body>
+    <div class="profile-container">
+        <button id="backButton" class="back-btn">← Dashboard</button>
+
+        <div class="profile-content">
+            <div class="profile-header">
+                <div class="profile-image">
+                    <img src="a1.jpg" alt="Donor's Profile Picture">
+                </div>
+                <div class="profile-details">
+                    <h1 id="donorName">Nasir A Rajak Nadaf</h1>
+                    <p class="blood-group">Blood Group: <strong id="bloodGroup">O+</strong></p>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <div class="info-item">
+                    <span class="info-label">Email:</span>
+                    <span id="email" class="info-value">nasir7777786@gmail.com</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Phone:</span>
+                    <span id="phone" class="info-value">7822259525</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Address:</span>
+                    <span id="address" class="info-value">123 Main St, Solapur</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Last Donation Date:</span>
+                    <span id="lastDonation" class="info-value">October 30, 2024</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Number of Donations:</span>
+                    <span id="numDonations" class="info-value">1</span>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button class="action-btn edit-btn" onclick="editProfile()">Edit Profile</button>
+                <button class="action-btn history-btn" onclick="showDonationHistory()">Donation History</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div id="editProfileModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('editProfileModal')">&times;</span>
+            <h2>Edit Profile</h2>
+            <div class="input-group">
+                <label for="emailEdit">Email:</label>
+                <input type="text" id="emailEdit">
+            </div>
+            <div class="input-group">
+                <label for="phoneEdit">Phone:</label>
+                <input type="text" id="phoneEdit">
+            </div>
+            <div class="input-group">
+                <label for="addressEdit">Address:</label>
+                <input type="text" id="addressEdit">
+            </div>
+            <button class="save-btn" onclick="saveProfileChanges()">Save Changes</button>
+        </div>
+    </div>
+
+    <!-- Donation History Modal -->
+    <div id="donationHistoryModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('donationHistoryModal')">&times;</span>
+            <h2>Donation History</h2>
+            <p id="donationHistory">Loading...</p>
+        </div>
+    </div>
+
+    <script src="assets/js/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Dashboard - Chaincare Blood Bank System</title>
+    <link rel="stylesheet" href="assets/css/Donor_DashBoard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <div class="logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="DashBoard.html" class="active">Dashboard</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="#donateButton">Donate Now</a></li>
+                    <li><a href="Login_Donor.html">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h1>Welcome, <span id="donorName">Nasir A Rajak Nadaf</span></h1>
+            </header>
+
+            <section class="dashboard-summary">
+                <div class="summary-card">
+                    <h2>Total Donations</h2>
+                    <p id="totalDonations">1</p>
+                </div>
+                <div class="summary-card">
+                    <h2>Last Donation Date</h2>
+                    <p id="lastDonationDate">October 30, 2024</p>
+                </div>
+                <div class="summary-card">
+                    <h2>Next Eligible Donation</h2>
+                    <p id="nextEligibleDonation">January 30, 2025</p>
+                </div>
+            </section>
+
+            
+
+            <section class="recent-activities">
+                <h2>Recent Donations</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Donation Center</th>
+                            <th>Blood Group</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="donationHistoryTable">
+                        <!-- Donations will be dynamically added here -->
+                    </tbody>
+                </table>
+            </section>
+            <!-- Donate Now Section -->
+            <section class="donate-now">
+                <h2>Ready to Donate?</h2>
+                <button class="donate-button" id="donateButton">Donate Now</button>
+                
+                <!-- Donation Form (Initially Hidden) -->
+                <div class="donation-form" id="donationForm">
+                    <h3>Donation Form</h3>
+                    <form id="donationFormDetails">
+                        <label for="bloodGroup">Select Blood Group:</label>
+                        <select id="bloodGroup" name="bloodGroup" required>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                        </select>
+
+                        <label for="donationCenter">Select Donation Center:</label>
+                        <select id="donationCenter" name="donationCenter" required>
+                            <option value="Central Blood Bank">Central Blood Bank</option>
+                            <option value="City Blood Donation">City Blood Donation</option>
+                            <option value="Downtown Blood Clinic">Downtown Blood Clinic</option>
+                        </select>
+
+                        <button type="submit" class="submit-donation">Submit Donation</button>
+                    </form>
+                    <button class="close-form" id="closeForm">Close</button>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="assets/js/Donor_DashBoard.js"></script>
+</body>
+</html>

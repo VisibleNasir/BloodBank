@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Blood Bank System</title>
+    <link rel="stylesheet" href="admin_Dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2 class="sidebar-heading">Admin Dashboard</h2>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="Det_Donor.html">Donor Info</a></li>
+                <li><a href="#">Patient Info</a></li>
+                <li><a href="#">Donations</a></li>
+                <li><a href="bloodReq.html">Blood Requests</a></li>
+                <li><a href="requiest_history.html">Request History</a></li>
+                <li><a href="stock.html">Blood Stock</a></li>
+                <li><a href="stock.html">Log out</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h1 class="dashboard-title">Blood Bank Summary</h1>
+            
+            <!-- Stats Overview -->
+            <div class="stats-overview">
+                <div class="stat-box">
+                    <h3>Total Donors</h3>
+                    <p id="totalDonors">0</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Donor Requests</h3>
+                    <p id="donorRequests">0</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Approved Requests</h3>
+                    <p id="approvedRequests">0</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Total Blood Units</h3>
+                    <p id="totalBloodUnits">0</p>
+                </div>
+            </div>
+            
+            <!-- Blood Stock Details -->
+            <h2 class="section-title">Blood Stock by Type</h2>
+            <div class="blood-stock">
+                <div class="blood-type">
+                    <h4>A+</h4>
+                    <p id="aPlusStock">0 units</p>
+                </div>
+                <div class="blood-type">
+                    <h4>A-</h4>
+                    <p id="aMinusStock">0 units</p>
+                </div>
+                <div class="blood-type">
+                    <h4>B+</h4>
+                    <p id="bPlusStock">0 units</p>
+                </div>
+                <div class="blood-type">
+                    <h4>B-</h4>
+                    <p id="bMinusStock">0 units</p>
+                </div>
+                <div class="blood-type">
+                    <h4>AB+</h4>
+                    <p id="abPlusStock">0 units</p>
+                </div>
+                <div class="blood-type">
+                    <h4>AB-</h4>
+                    <p id="abMinusStock">0 units</p>
+                </div>
+                <div class="blood-type">
+                    <h4>O+</h4>
+                    <p id="oPlusStock">0 units</p>
+                </div>
+                <div class="blood-type">
+                    <h4>O-</h4>
+                    <p id="oMinusStock">0 units</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Admin_Dashboard.js"></script>
+</body>
+</html>

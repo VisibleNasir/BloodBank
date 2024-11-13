@@ -1,0 +1,185 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body styling for flex layout */
+body {
+    display: flex;
+    height: 100vh;
+    overflow-x: hidden;
+    background: #f4f6f8;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 220px;
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    position: fixed; /* Fix sidebar on the left */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: background 0.3s;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #495057;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+
+/* Main Content Styling */
+.container {
+    display: flex;
+    width: 100%;
+    margin-left: 220px; /* Adjust for fixed sidebar */
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.content h1 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Blood Stock Cards Layout */
+.blood-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.blood-card {
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 220px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.blood-card:hover {
+    transform: scale(1.05);
+}
+
+.card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.blood-icon {
+    font-size: 2em;
+    margin-right: 10px;
+}
+
+.card-header h3 {
+    font-size: 24px;
+    color: #343a40;
+    font-weight: 600;
+}
+
+.card-body {
+    font-size: 14px;
+    color: #555;
+}
+
+.card-body p {
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+/* Blood type-specific card styling */
+#A-positive .blood-icon {
+    color: #FF5733;
+}
+
+#O-negative .blood-icon {
+    color: #4CAF50;
+}
+
+#B-positive .blood-icon {
+    color: #007BFF;
+}
+
+#AB-positive .blood-icon {
+    color: #FFC107;
+}
+
+#A-negative .blood-icon {
+    color: #FF6347;
+}
+
+#O-positive .blood-icon {
+    color: #2E8B57;
+}
+
+#B-negative .blood-icon {
+    color: #4682B4;
+}
+
+#AB-negative .blood-icon {
+    color: #FFD700;
+}
+
+/* Make sidebar and content responsive */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 180px; /* Narrow sidebar on smaller screens */
+    }
+
+    .container {
+        margin-left: 180px; /* Adjust content layout */
+    }
+
+    .sidebar ul li a {
+        font-size: 16px;
+    }
+
+    .blood-card {
+        width: 180px; /* Make cards narrower on smaller screens */
+    }
+}

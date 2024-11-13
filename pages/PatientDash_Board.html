@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard - Chaincare Health System</title>
+    <link rel="stylesheet" href="assets/css/Patient_DashBoard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="appointments.html">Appointments</a></li>
+                    <li><a href="Patient_Login.html">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h1>Welcome, <span id="patientName">Rajesh Yemul</span></h1>
+            </header>
+
+            <section class="dashboard-summary">
+                <div class="summary-card">
+                    <h2>Last Appointment</h2>
+                    <p id="lastAppointmentDate">October 15, 2024</p>
+                </div>
+                <div class="summary-card">
+                    <h2>Next Appointment</h2>
+                    <p id="nextAppointmentDate">November 15, 2024</p>
+                </div>
+                <div class="summary-card">
+                    <h2>Medical Condition</h2>
+                    <p id="medicalCondition">Diabetes Type 2</p>
+                </div>
+            </section>
+
+            <section class="recent-appointments">
+                <h2>Recent Appointments</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Doctor</th>
+                            <th>Reason</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="appointmentHistoryTable">
+                        <!-- Appointments will be dynamically added here -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Book Appointment Section -->
+            <section class="book-appointment">
+                <h2>Need an Appointment?</h2>
+                <button class="book-button" id="bookButton">Book Appointment</button>
+                
+                <!-- Appointment Form (Initially Hidden) -->
+                <div class="appointment-form" id="appointmentForm">
+                    <h3>Appointment Form</h3>
+                    <form id="appointmentFormDetails">
+                        <label for="doctor">Select Doctor:</label>
+                        <select id="doctor" name="doctor" required>
+                            <option value="Dr. Smith">Dr. Smith</option>
+                            <option value="Dr. Johnson">Dr. Johnson</option>
+                            <option value="Dr. Lee">Dr. Lee</option>
+                        </select>
+
+                        <label for="appointmentDate">Select Appointment Date:</label>
+                        <input type="date" id="appointmentDate" name="appointmentDate" required>
+
+                        <button type="submit" class="submit-appointment">Book Appointment</button>
+                    </form>
+                    <button class="close-form" id="closeForm">Close</button>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="assets/js/Patient_DashBoard.js"></script>
+</body>
+</html>

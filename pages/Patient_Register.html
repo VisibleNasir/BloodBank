@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration - Blood Bank System</title>
+    <link rel="stylesheet" href="assets/css/Patient_Register.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1 class="form-heading">Patient Registration</h1>
+          
+            
+            <form id="registerForm">
+                <!-- First Name -->
+                <div class="input-group">
+                    <h2>Personal Information</h2>
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" placeholder="Enter your first name" required>
+                </div>
+
+                <!-- Last Name -->
+                <div class="input-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" placeholder="Enter your last name" required>
+                </div>
+                
+                <!-- Username -->
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Choose a username" required>
+                </div>
+                
+                <!-- Password -->
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+
+                <!-- Age -->
+                <div class="input-group">
+                    <h2>Health Information</h2>
+                    <label for="age">Age</label>
+                    <input type="number" id="age" placeholder="Enter your age" required>
+                </div>
+
+                <!-- Blood Group -->
+                <div class="input-group">
+                    <label for="bloodGroup">Blood Group</label>
+                    <input type="text" id="bloodGroup" placeholder="Enter your blood group" required>
+                </div>
+
+                <!-- Disease -->
+                <div class="input-group">
+                    <label for="disease">Disease</label>
+                    <input type="text" id="disease" placeholder="Enter your disease" required>
+                </div>
+
+                <!-- Doctor Name -->
+                <div class="input-group">
+                    <label for="doctorName">Doctor Name</label>
+                    <input type="text" id="doctorName" placeholder="Enter your doctor name" required>
+                </div>
+
+                <!-- Address -->
+                <div class="input-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" rows="3" placeholder="Enter your address" required></textarea>
+                </div>
+
+                <!-- Mobile -->
+                <div class="input-group">
+                    <label for="mobile">Mobile</label>
+                    <input type="tel" id="mobile" placeholder="Enter your mobile number" required>
+                </div>
+
+                <!-- Profile Picture -->
+                <div class="input-group">
+                    <h2>Profile Picture</h2>
+                    <label for="profilePic">Profile Picture</label>
+                    <input type="file" id="profilePic" required>
+                </div>
+
+                <!-- Register Button -->
+                <button type="submit" class="submit-btn">Register</button>
+
+                <p id="registerMessage" class="error"></p>
+            </form>
+            
+            <!-- Link to Login Page -->
+            <p class="subtitle">Already have an account? <a href="Patient_Login.html">Click here to login</a></p>
+        </div>
+    </div>
+
+    <script src="assets/js/Patient_Register.js"></script>
+</body>
+</html>
